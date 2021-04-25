@@ -1,8 +1,14 @@
-import './App.css';
+import React from "react";
+import { MyForm } from "./MyForm";
 
-function App() {
+
+const App = () => {
   return (
-    <div style={{ textAlign: "center"}}> Hello world  </div>
+    <div style={{ textAlign: "center"}}> 
+      <MyForm onSubmit={({email, firstName, lastName}) => {
+        console.log( firstName, lastName, email);
+      }}/>
+    </div>
   );
 }
 
